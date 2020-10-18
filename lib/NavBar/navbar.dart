@@ -26,22 +26,32 @@ class MobileNavBar extends StatelessWidget {
               fontSize: 30
           ),),
 
-          Row(
-            children: [
-              Text("Home", style: TextStyle(
-                  color: Colors.white
-              ),
-              ),
-              Text("About Me", style: TextStyle(
-                  color: Colors.white
-              ),
-              ),
-              Text("Blog", style: TextStyle(
-                  color: Colors.white
-              ),
-              )
+          Padding(
+            padding: const EdgeInsets.all(12.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text("Home", style: TextStyle(
+                    color: Colors.white
+                ),
+                ),
+                SizedBox(
+                  width: 30,
+                ),
+                Text("About Me", style: TextStyle(
+                    color: Colors.white
+                ),
+                ),
+                SizedBox(
+                  width: 30,
+                ),
+                Text("Blog", style: TextStyle(
+                    color: Colors.white
+                ),
+                )
 
-            ],
+              ],
+            ),
           )
         ],
       ),
@@ -55,7 +65,6 @@ class DesktopNavBar extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 40),
       child: Container(
-        constraints: BoxConstraints(maxWidth: 1200),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [

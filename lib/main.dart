@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_web/LandingPage/LandingPage.dart';
 import 'package:flutter_app_web/NavBar/navbar.dart';
 
 void main() {
@@ -10,10 +11,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
+        fontFamily: "Quicksand"
       ),
       home: MyHomePage(),
     );
@@ -35,7 +38,11 @@ class MyHomePage extends StatelessWidget {
         ),
         child: Column(
           children: [
-            NavBar()
+            NavBar(),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 40.0),
+              child: LandingPage(),
+            )
           ],
         ),
       ),
